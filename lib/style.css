@@ -1,33 +1,55 @@
-.start-screen {
-  width: 400px;
-  height: 400px;
-  background-color: #399B7C;
-/*  display: none;*/
+* {
+  margin: 0;
 }
 
-.game-over-screen {
-  width: 400px;
-  height: 200px;
+.start-screen {
+  width: 850px;
+  height: 650px;
   background-color: #399B7C;
-  opacity: 50%;
-  position: absolute;
-  z-index: 1;
-  visibility: hidden;
-  margin-top: 100px;
+  margin-left: 100px;
 }
 
 p {
   color: #FFFFFF;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.game-over-screen {
+  width: 850px;
+  height: 450px;
+  background-color: #399B7C;
+  opacity: 0.85;
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  margin-top: 90px;
+  margin-left: 102px;
+}
+
+.title {
+  font-size: 60px;
+  padding-top: 50px;
+  color: #5850AC;
+  font-weight: bold;
 }
 
 button {
-  margin-left: 50px;
-  height: 40px;
-  width: 200px;
+  margin-left: 300px;
+  height: 200px;
+  width: 250px;
+  font-size: 50px;
+  background-color: #5850AC;
+}
+
+button:hover {
+  background-color: #AE3CD5
 }
 
 canvas {
-  border: 1px solid black;
+  border: 2px solid black;
   visibility: hidden;
+  margin-left: 100px;
 }
