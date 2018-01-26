@@ -1,3 +1,22 @@
+.start-screen {
+  width: 400px;
+  height: 400px;
+  background-color: #399B7C;
+/*  display: none;*/
+}
+
+p {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.start-button {
+  margin-left: 50px;
+  height: 40px;
+  width: 200px;
+}
+
 canvas {
   border: 1px solid black;
+  visibility: hidden;
 }
