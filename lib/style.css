@@ -5,12 +5,23 @@
 /*  display: none;*/
 }
 
+.game-over-screen {
+  width: 400px;
+  height: 200px;
+  background-color: #399B7C;
+  opacity: 50%;
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  margin-top: 100px;
+}
+
 p {
   color: #FFFFFF;
   text-align: center;
 }
 
-.start-button {
+button {
   margin-left: 50px;
   height: 40px;
   width: 200px;
