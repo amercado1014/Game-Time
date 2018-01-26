@@ -4,23 +4,24 @@
   <meta charset="utf-8">
   <title>Game Time</title>
   <link rel="stylesheet" href="lib/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 <body>
   <div class="start-screen">
-    <p>Break Out!</p>
+    <p class="title">Break Out!</p>
     <p>Instructions:</p>
     <p>Use left and right arrow to move the paddle.</p>
     <p>Break all the bricks to move to the next level.</p>
     <button class="start-button">Start Game</button>
   </div>
   <div class="game-over-screen">
-    <p>Game Over!</p>
+    <p class="title">Game Over!</p>
     <button class="restart-button">Restart Game</button>
   </div>
   <canvas
     id="game"
-    width="400"
-    height="400">
+    width="850"
+    height="650">
   </canvas>
 
   <script src="main.bundle.js"></script>
