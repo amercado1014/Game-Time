@@ -17,7 +17,8 @@ p {
   padding-bottom: 10px;
 }
 
-.game-over-screen {
+.game-over-screen,
+.win-screen {
   width: 850px;
   height: 450px;
   background-color: #399B7C;
