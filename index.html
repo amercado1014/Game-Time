@@ -9,41 +9,57 @@
 </head>
 <body>
   <div class="flex">
-  <div class="start-screen">
-    <p class="title">Break Out!</p>
-    <p>Instructions:</p>
-    <p>Use left arrow (<i class="fas fa-arrow-left"></i>) and right arrow (<i class="fas fa-arrow-right"></i>) to move the paddle.</p>
-    <p>Break all the bricks to move to the next level.</p>
-    <p>You have three lives per level.</p>
-        <div class="button-div">
-    <button class="start-button">Start Game</button>
+    <div class="start-screen">
+      <p class="title">Break Out!</p>
+      <p>Instructions:</p>
+      <p>Use left arrow (<i class="fas fa-arrow-left"></i>) and right arrow (<i class="fas fa-arrow-right"></i>) to move the paddle.</p>
+      <p>Break all the bricks to move to the next level.</p>
+      <p>You have three lives per level.</p>
+      <div class="button-div">
+        <button class="start-button">Start Game</button>
+      </div>
     </div>
   </div>
-  </div>
   <div class="flex">
-  <div class="game-over-screen">
-    <p class="title">Game Over!</p>
-    <div class="button-div">
-      <button class="restart-button">Restart Game</button>
+    <div class="level-2-screen">
+      <p class="title">Congrats</p>
+      <div class="button-div">
+        <button class="up-level-2-button">Start Level 2</button>
+      </div>
     </div>
   </div>
-  </div>
   <div class="flex">
-  <div class="win-screen">
-    <p class="title">YOU WIN!</p>
-        <div class="button-div">
-    <button class="win-restart-button">Restart Game</button>
+    <div class="level-3-screen">
+      <p class="title">Congrats</p>
+      <div class="button-div">
+        <button class="up-level-3-button">Start Level 3</button>
+      </div>
     </div>
   </div>
+  <div class="flex">
+    <div class="game-over-screen">
+      <p class="title">Game Over!</p>
+      <div class="button-div">
+        <button class="restart-button">Restart Game</button>
+      </div>
+    </div>
   </div>
   <div class="flex">
-  <canvas
+    <div class="win-screen">
+      <p class="title">YOU WIN!</p>
+      <div class="button-div">
+        <button class="win-restart-button">Restart Game</button>
+      </div>
+    </div>
+  </div>
+  <div class="flex">
+    <canvas
     id="game"
     width="850"
     height="700">
   </canvas>
-  </div>
-  <script src="main.bundle.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+</div>
+<script src="main.bundle.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 </body>
 </html>
