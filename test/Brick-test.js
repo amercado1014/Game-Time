@@ -34,6 +34,4 @@ describe('Brick', function() {
   it('should start off not being hit', function() {
     assert.equal(brick.hit, false);
   });
-
-  
 });
