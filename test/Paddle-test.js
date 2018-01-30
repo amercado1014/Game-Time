@@ -1,11 +1,10 @@
 const { assert } = require('chai');
 const Paddle = require('../lib/Paddle.js');
-// const canvas = require('../lib/index.js')
+const Ball = require('../lib/Ball.js');
 
 describe('Paddle', function() {
   var paddle;
-  // var canvas;
-  // var ctx;
+
   beforeEach(function() {
     paddle = new Paddle(10, 20, 30, 40);
  
@@ -18,38 +17,21 @@ describe('Paddle', function() {
     assert.equal(paddle.height, 40)
   })
 
-  it('should be filled square', function() {
-    // var canvas = createCanvas(200, 200);
-    // var ctx = canvas.getContext('2d');
-    paddle.drawPaddle(ctx);
-    assert.equal(ctx.fillStyle, "#94198D")
+  it('ball should change X direction on collision with side of paddle', function() {
+    var ball = new Ball(60, 25, 10, 2, 2);
+    paddle = new Paddle(60, 20, 30, 40);
+    assert.equal(ball.dX, 2);
+    paddle.paddleCollision(ball);
+    assert.equal(ball.dX, -2);
   })
 
-  it('should have black background square', function(){
-    paddle.drawPaddle(ctx);
-    assert.equal(ctx.fillStyle, "black")
+  it('ball should change Y direction on collision with top of paddle', function() {
+    var ball = new Ball(60, 20, 10, 2, 2);
+    paddle = new Paddle(60, 20, 30, 40);
+    assert.equal(ball.dY, 2);
+    paddle.paddleCollision(ball);
+    assert.equal(ball.dY, -2);
   })
 
 })
 
-  // it('background square should be black', function(){
-    
-  //   assert.equal(paddle, object)
-  // })
-
-//drawPaddle
-//should be drawn
-//should have color
-  it('should draw paddle on canvas', function() {
-
-  })
-
-
-  //erase
-  //should not be on page
-
-  //paddle collision
-  //should change direction
-
-
-// })
