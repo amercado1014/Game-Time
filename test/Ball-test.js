@@ -1,6 +1,5 @@
 const { assert } = require('chai');
 const Ball = require('../lib/Ball.js');
-// import ctx from '../lib/index.js';
 
 describe('Ball', function() {
   var ball;
@@ -32,12 +31,5 @@ describe('Ball', function() {
 
   it('should start with three lives', function() {
     assert.equal(ball.lives, 3);
-  });
-
-  it.skip('should have a drawBall method', function() {
-    drawBall(ctx);
-
-    assert.equal(ctx.fillStyle, '#198D94');
-
   });
 });
