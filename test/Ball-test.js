@@ -98,8 +98,8 @@ describe('Ball', function() {
     ball.bounce(game);
     assert.equal(game.lives, 2);
 
-    assert.equal(ball.x, 420);
-    assert.equal(ball.y, 560);
+    assert.equal(ball.x, 330);
+    assert.equal(ball.y, 635);
     assert.equal(ball.dY, 5);
   });
 

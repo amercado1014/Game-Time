@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+body {
+  background-image: url("Images/breakoutbackground.png");
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -64,6 +68,7 @@ button:hover {
 }
 
 canvas {
+  background-color: #C4C0C2;
   border: 2px solid black;
   align-self: center;
   display: none;
