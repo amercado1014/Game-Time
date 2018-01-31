@@ -18,19 +18,31 @@ describe('Paddle', function() {
   })
 
   it('ball should change X direction on collision with side of paddle', function() {
-    var ball = new Ball(60, 25, 10, 2, 2);
-    paddle = new Paddle(60, 20, 30, 40);
-    assert.equal(ball.dX, 2);
+    var ball = new Ball(230, 660, 15, 5, 5);
+    var paddle = new Paddle(300, 650, 300, 20);
+
+    assert.equal(ball.dX, 5);
     paddle.paddleCollision(ball);
-    assert.equal(ball.dX, -2);
+    assert.equal(ball.dX, 5);
+
+    ball = new Ball(285, 660, 15, 5, 5);
+    assert.equal(ball.dX, 5);
+    paddle.paddleCollision(ball);
+    assert.equal(ball.dX, -5);
   })
 
   it('ball should change Y direction on collision with top of paddle', function() {
-    var ball = new Ball(60, 20, 10, 2, 2);
-    paddle = new Paddle(60, 20, 30, 40);
-    assert.equal(ball.dY, 2);
+    var ball = new Ball(230, 635, 15, 5, 5);
+    var paddle = new Paddle(300, 650, 300, 20);
+
+    assert.equal(ball.dY, -5);
     paddle.paddleCollision(ball);
-    assert.equal(ball.dY, -2);
+    assert.equal(ball.dY, -5);
+
+    ball = new Ball(330, 635, 15, 5, 5);
+    assert.equal(ball.dY, -5);
+    paddle.paddleCollision(ball);
+    assert.equal(ball.dY, 5);
   })
 
 })
