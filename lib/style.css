@@ -22,7 +22,9 @@ p {
 }
 
 .game-over-screen,
-.win-screen {
+.win-screen,
+.level-2-screen,
+.level-3-screen {
   width: 850px;
   height: 450px;
   background-color: #399B7C;
