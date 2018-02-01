@@ -9,10 +9,6 @@ describe('Ball', function() {
     ball = new Ball(20, 560, 15, 5, 5);
   });
 
-  it('should return true', function() {
-    assert.equal(true, true);
-  });
-
   it('should take arguments for x, y, radius, dX and dY', function() {
     assert.equal(ball.x, 20);
     assert.equal(ball.y, 560);
@@ -71,7 +67,7 @@ describe('Ball', function() {
     assert.equal(ball.dY, 5);
   });
 
-  it('should decrement lives if not hit by paddle', function() {
+  it('should decrement lives when hitting bottom of canvas', function() {
     var game = new Game;
 
     assert.equal(game.lives, 3);
@@ -85,7 +81,7 @@ describe('Ball', function() {
     assert.equal(game.lives, 2);
   });
 
-  it('should repositon after losing a life', function() {
+  it('should reposition after losing a life', function() {
     var game = new Game;
 
     assert.equal(game.lives, 3);
@@ -103,7 +99,7 @@ describe('Ball', function() {
     assert.equal(ball.dY, 5);
   });
 
-  it('should stop playing if lives equal 0', function() {
+  it('should stop playing if out of lives', function() {
     var game = new Game;
     ball = new Ball(20, 700, 15, 5, 5);
     game.lives = 1

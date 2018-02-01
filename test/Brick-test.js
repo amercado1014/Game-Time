@@ -10,10 +10,6 @@ describe('Brick', function() {
     brick = new Brick(50, 50);
   });
 
-  it('should return true', function() {
-    assert.equal(true, true);
-  });
-
   it('should take arguments for x and y', function() {
     assert.equal(brick.x, 50);
     assert.equal(brick.y, 50);
