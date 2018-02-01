@@ -7,7 +7,6 @@ describe('Paddle', function() {
 
   beforeEach(function() {
     paddle = new Paddle(10, 20, 30, 40);
- 
   });
 
   it('should have x-position, y-position, width and height', function() {
@@ -15,7 +14,7 @@ describe('Paddle', function() {
     assert.equal(paddle.y, 20)
     assert.equal(paddle.width, 30)
     assert.equal(paddle.height, 40)
-  })
+  });
 
   it('ball should change X direction on collision with side of paddle', function() {
     var ball = new Ball(230, 660, 15, 5, 5);
@@ -29,7 +28,7 @@ describe('Paddle', function() {
     assert.equal(ball.dX, 5);
     paddle.paddleCollision(ball);
     assert.equal(ball.dX, -5);
-  })
+  });
 
   it('ball should change Y direction on collision with top of paddle', function() {
     var ball = new Ball(230, 635, 15, 5, 5);
@@ -43,7 +42,15 @@ describe('Paddle', function() {
     assert.equal(ball.dY, -5);
     paddle.paddleCollision(ball);
     assert.equal(ball.dY, 5);
-  })
+  });
 
-})
+  it('should move on keypress', function() {
+    var e = {'keyCode': 39}
+    
+    assert.equal(paddle.x, 10);
 
+    paddle.movePaddle(e, 850);
+
+    assert.equal(paddle.x, 60);
+  });
+});
